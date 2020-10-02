@@ -26,7 +26,7 @@ class WeuiToastWidget extends StatelessWidget {
         child: Container(
           width: 122.0,
           decoration: BoxDecoration(
-              color: Color.fromRGBO(17, 17, 17, 0.7),
+              color: Color.fromRGBO(255, 17, 17, 0.7),
               borderRadius: BorderRadius.circular(5.0)),
           constraints: BoxConstraints(
             minHeight: 122.0,
@@ -204,7 +204,7 @@ HideCallback showWeuiToast(
 
   Completer<VoidCallback> result = Completer<VoidCallback>();
   var backButtonName = 'CoolUI_WeuiToast$backButtonIndex';
-  BackButtonInterceptor.add((stopDefaultButtonEvent){
+  BackButtonInterceptor.add((stopDefaultButtonEvent, b){
     print(backButtonClose);
     if(backButtonClose){
       result.future.then((hide){
