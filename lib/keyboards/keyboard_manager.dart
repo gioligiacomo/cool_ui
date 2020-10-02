@@ -167,7 +167,7 @@ class CoolKeyboard {
       }
     });
 
-    BackButtonInterceptor.add((_, b) {
+    BackButtonInterceptor.add((_) {
       CoolKeyboard.sendPerformAction(TextInputAction.done);
       return true;
     }, zIndex: 1, name: 'CustomKeyboard');
