@@ -43,11 +43,11 @@ class WeuiToastWidget extends StatelessWidget {
                       margin: EdgeInsets.only(top: 22.0),
                       constraints: BoxConstraints(minHeight: 55.0),
                       child: IconTheme(
-                          data: IconThemeData(color: Colors.white, size: 55.0),
+                          data: IconThemeData(color: Colors.grey[600], size: 55.0),
                           child: icon),
                     ),
                     DefaultTextStyle(
-                      style: TextStyle(color: Colors.grey[800], fontSize: 16.0),
+                      style: TextStyle(color: Colors.grey[600], fontSize: 16.0),
                       child: message,
                     ),
                   ],
