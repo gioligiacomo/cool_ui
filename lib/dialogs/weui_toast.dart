@@ -23,8 +23,10 @@ class WeuiToastWidget extends StatelessWidget {
       child: Align(
       alignment: this.alignment,
       child: IntrinsicHeight(
-        child: ClipRect(
-          child: BackdropFilter(
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: ClipRect(
+            child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
               child: Container(
                 width: 122.0,
@@ -44,14 +46,15 @@ class WeuiToastWidget extends StatelessWidget {
                           child: icon),
                     ),
                     DefaultTextStyle(
-                      style: TextStyle(color: Colors.white, fontSize: 16.0),
+                      style: TextStyle(color: Colors.black, fontSize: 16.0),
                       child: message,
                     ),
                   ],
                 ),
               ),
+            ),
           ),
-        ),
+        )
       ),
     ),
     );
