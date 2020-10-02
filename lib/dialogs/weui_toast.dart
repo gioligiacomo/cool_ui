@@ -23,28 +23,36 @@ class WeuiToastWidget extends StatelessWidget {
       child: Align(
       alignment: this.alignment,
       child: IntrinsicHeight(
-        child: Container(
-          width: 122.0,
-          decoration: BoxDecoration(
-              color: Color.fromRGBO(255, 17, 255, 0.7),
-              borderRadius: BorderRadius.circular(5.0)),
-          constraints: BoxConstraints(
-            minHeight: 122.0,
-          ),
-          child: Column(
-            children: <Widget>[
-              Container(
-                margin: EdgeInsets.only(top: 22.0),
-                constraints: BoxConstraints(minHeight: 55.0),
-                child: IconTheme(
-                    data: IconThemeData(color: Colors.white, size: 55.0),
-                    child: icon),
-              ),
-              DefaultTextStyle(
-                style: TextStyle(color: Colors.white, fontSize: 16.0),
-                child: message,
-              ),
-            ],
+        child: ClipRect(
+          child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20, bottom: 10, right: 20),
+                child: Container(
+                  width: 122.0,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5.0)),
+                  constraints: BoxConstraints(
+                    minHeight: 122.0,
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.only(top: 22.0),
+                        constraints: BoxConstraints(minHeight: 55.0),
+                        child: IconTheme(
+                            data: IconThemeData(color: Colors.white, size: 55.0),
+                            child: icon),
+                      ),
+                      DefaultTextStyle(
+                        style: TextStyle(color: Colors.white, fontSize: 16.0),
+                        child: message,
+                      ),
+                    ],
+                  ),
+                ),
+              )
           ),
         ),
       ),
@@ -204,7 +212,7 @@ HideCallback showWeuiToast(
 
   Completer<VoidCallback> result = Completer<VoidCallback>();
   var backButtonName = 'CoolUI_WeuiToast$backButtonIndex';
-  BackButtonInterceptor.add((stopDefaultButtonEvent){
+  BackButtonInterceptor.add((stopDefaultButtonEvent, _b){
     print(backButtonClose);
     if(backButtonClose){
       result.future.then((hide){

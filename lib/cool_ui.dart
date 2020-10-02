@@ -3,6 +3,7 @@ library cool_ui;
 import 'dart:async';
 import 'dart:ui' as ui;
 import 'dart:core';
+import 'dart:ui';
 
 import 'package:back_button_interceptor/back_button_interceptor.dart';
 import 'package:flutter/foundation.dart';
