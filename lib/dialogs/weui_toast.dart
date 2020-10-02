@@ -104,7 +104,7 @@ class WeuiLoadingIconState extends State<WeuiLoadingIcon>
     return Transform.rotate(
         angle: _doubleAnimation.value ~/ 30 * 30.0 * 0.0174533,
         child: Image.asset("assets/images/loading.png",
-            package: "cool_ui", width: widget.size, height: widget.size));
+            package: "cool_ui", width: widget.size, height: widget.size, color: Colors.black,));
   }
 }
 
