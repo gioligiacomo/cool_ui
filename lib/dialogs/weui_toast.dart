@@ -32,7 +32,7 @@ class WeuiToastWidget extends StatelessWidget {
                 width: 122.0,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5.0),
-                    color: Colors.grey[200].withOpacity(0.5)
+                    color: Colors.grey[300].withOpacity(0.5)
                 ),
                 constraints: BoxConstraints(
                   minHeight: 122.0,
@@ -104,7 +104,7 @@ class WeuiLoadingIconState extends State<WeuiLoadingIcon>
     return Transform.rotate(
         angle: _doubleAnimation.value ~/ 30 * 30.0 * 0.0174533,
         child: Image.asset("assets/images/loading.png",
-            package: "cool_ui", width: widget.size, height: widget.size, color: Colors.black,));
+            package: "cool_ui", width: widget.size, height: widget.size,));
   }
 }
 
