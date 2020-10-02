@@ -26,33 +26,30 @@ class WeuiToastWidget extends StatelessWidget {
         child: ClipRect(
           child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20, bottom: 10, right: 20),
-                child: Container(
-                  width: 122.0,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(5.0)),
-                  constraints: BoxConstraints(
-                    minHeight: 122.0,
-                  ),
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        margin: EdgeInsets.only(top: 22.0),
-                        constraints: BoxConstraints(minHeight: 55.0),
-                        child: IconTheme(
-                            data: IconThemeData(color: Colors.white, size: 55.0),
-                            child: icon),
-                      ),
-                      DefaultTextStyle(
-                        style: TextStyle(color: Colors.white, fontSize: 16.0),
-                        child: message,
-                      ),
-                    ],
-                  ),
+              child: Container(
+                width: 122.0,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(5.0)),
+                constraints: BoxConstraints(
+                  minHeight: 122.0,
                 ),
-              )
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(top: 22.0),
+                      constraints: BoxConstraints(minHeight: 55.0),
+                      child: IconTheme(
+                          data: IconThemeData(color: Colors.white, size: 55.0),
+                          child: icon),
+                    ),
+                    DefaultTextStyle(
+                      style: TextStyle(color: Colors.white, fontSize: 16.0),
+                      child: message,
+                    ),
+                  ],
+                ),
+              ),
           ),
         ),
       ),
