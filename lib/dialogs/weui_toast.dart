@@ -35,7 +35,7 @@ class WeuiToastWidget extends StatelessWidget {
                     color: Colors.grey[300].withOpacity(0.5)
                   ),
                   constraints: BoxConstraints(
-                    minHeight: double.infinity,
+                    minHeight: 150,
                     maxHeight: 200
                   ),
                   child: Column(
