@@ -21,8 +21,7 @@ class WeuiToastWidget extends StatelessWidget {
     var widget = Material(
       color: Colors.transparent,
       child: Align(
-      alignment: this.alignment,
-      child: IntrinsicHeight(
+        alignment: this.alignment,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: ClipRect(
@@ -34,9 +33,9 @@ class WeuiToastWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5.0),
                     color: Colors.grey[300].withOpacity(0.5)
                 ),
-//                constraints: BoxConstraints(
-//                  minHeight: 122.0,
-//                ),
+  //                constraints: BoxConstraints(
+  //                  minHeight: 122.0,
+  //                ),
                 child: Column(
                   children: <Widget>[
                     Container(
@@ -61,7 +60,6 @@ class WeuiToastWidget extends StatelessWidget {
           ),
         )
       ),
-    ),
     );
     return IgnorePointer(
       ignoring: !stopEvent,
