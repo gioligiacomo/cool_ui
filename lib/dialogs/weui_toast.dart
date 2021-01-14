@@ -22,43 +22,46 @@ class WeuiToastWidget extends StatelessWidget {
       color: Colors.transparent,
       child: Align(
         alignment: this.alignment,
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: ClipRect(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-              child: Container(
-                width: 122.0,
-                decoration: BoxDecoration(
+        child: IntrinsicHeight(
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: ClipRect(
+              child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                child: Container(
+                  width: 122.0,
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5.0),
                     color: Colors.grey[300].withOpacity(0.5)
-                ),
-  //                constraints: BoxConstraints(
-  //                  minHeight: 122.0,
-  //                ),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(top: 22.0),
-                      constraints: BoxConstraints(minHeight: 55.0),
-                      child: IconTheme(
-                          data: IconThemeData(color: Colors.grey[600], size: 55.0),
-                          child: icon),
-                    ),
-                    DefaultTextStyle(
-                      style: TextStyle(
-                          color: Colors.grey[600],
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.bold
+                  ),
+                  constraints: BoxConstraints(
+                    minHeight: 122.0,
+                    maxHeight: 200
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.only(top: 22.0),
+                        constraints: BoxConstraints(minHeight: 55.0),
+                        child: IconTheme(
+                            data: IconThemeData(color: Colors.grey[600], size: 55.0),
+                            child: icon),
                       ),
-                      child: message,
-                    ),
-                  ],
+                      DefaultTextStyle(
+                        style: TextStyle(
+                            color: Colors.grey[600],
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold
+                        ),
+                        child: message,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-        )
+          )
+        ),
       ),
     );
     return IgnorePointer(
