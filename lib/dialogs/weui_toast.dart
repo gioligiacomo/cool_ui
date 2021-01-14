@@ -35,7 +35,7 @@ class WeuiToastWidget extends StatelessWidget {
                     color: Colors.grey[300].withOpacity(0.5)
                   ),
                   constraints: BoxConstraints(
-                    minHeight: 122.0,
+                    minHeight: double.infinity,
                     maxHeight: 200
                   ),
                   child: Column(
@@ -47,19 +47,14 @@ class WeuiToastWidget extends StatelessWidget {
                             data: IconThemeData(color: Colors.grey[600], size: 55.0),
                             child: icon),
                       ),
-                      Expanded(
-                        child: FittedBox(
-                          fit: BoxFit.fitHeight,
-                          child: DefaultTextStyle(
-                            style: TextStyle(
-                                color: Colors.grey[600],
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold
-                            ),
-                            child: message,
-                          ),
-                        )
-                      )
+                      DefaultTextStyle(
+                        style: TextStyle(
+                            color: Colors.grey[600],
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold
+                        ),
+                        child: message,
+                      ),
                     ],
                   ),
                 ),
