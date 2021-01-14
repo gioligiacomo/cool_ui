@@ -47,16 +47,18 @@ class WeuiToastWidget extends StatelessWidget {
                             data: IconThemeData(color: Colors.grey[600], size: 55.0),
                             child: icon),
                       ),
-                      FittedBox(
-                        fit: BoxFit.fitHeight,
-                        child: DefaultTextStyle(
-                          style: TextStyle(
-                              color: Colors.grey[600],
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.bold
+                      Expanded(
+                        child: FittedBox(
+                          fit: BoxFit.fitHeight,
+                          child: DefaultTextStyle(
+                            style: TextStyle(
+                                color: Colors.grey[600],
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold
+                            ),
+                            child: message,
                           ),
-                          child: message,
-                        ),
+                        )
                       )
                     ],
                   ),
