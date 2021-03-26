@@ -27,12 +27,12 @@ class WeuiToastWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             child: ClipRect(
               child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
                 child: Container(
                   width: 122.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5.0),
-                    color: Colors.white.withOpacity(0.7)
+                    color: Colors.white.withOpacity(0.8)
                   ),
                   constraints: BoxConstraints(
                     minHeight: 122,
